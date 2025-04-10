@@ -183,20 +183,42 @@ h1, h2 {
 .animated-button:active {
   transform: scale(0.95);
 }
-
-
-/* Адаптація для мобільних */
 @media (max-width: 768px) {
+  body {
+      font-size: 14px !important;
+      padding: 10px !important;
+  }
+
   nav ul {
-    flex-direction: column;
+      flex-direction: column !important;
+      align-items: center !important;
+  }
+
+  header {
+      text-align: center !important;
+      padding: 10px !important;
+  }
+
+  .gallery {
+      flex-direction: column !important;
+      align-items: center !important;
   }
 
   .image-box {
-    width: 90%;
+      width: 90% !important;
   }
 
-  .text-over-image {
-    font-size: 14px;
-    padding: 4px;
+  table {
+      width: 100% !important;
+      font-size: 12px !important;
+  }
+
+  .animated-button {
+      width: 100% !important;
+      text-align: center !important;
   }
 }
+
+
+
+
