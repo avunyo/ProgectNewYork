@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея Нью-Йорка</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c3bab7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f3c5d;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #7ea4bc;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #666;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .image-box {
+      position: relative;
+      width: 300px;
+      border-radius: 8px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .text-over-image {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 5px;
+      font-size: 16px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* 🌐 Адаптація для мобільних */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      .image-box {
+        width: 90%;
+      }
+
+      .text-over-image {
+        font-size: 14px;
+        padding: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Галерея Нью-Йорка</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="newyork.html">Про Нью-Йорк</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="tips.html">Поради</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Фотографії міста</h2>
+    <div class="gallery">
+
+      <div class="image-box">
+        <img src="https://wikiway.com/upload/resize_cache/hl-photo/fe5/070/720_400_1/empayr-steyt-bilding_68.jpg" alt="Empire State 1">
+        <div class="text-over-image">New York City Street Road</div>
+      </div>
+
+      <div class="image-box">
+        <img src="https://wikiway.com/upload/hl-photo/a47/a82/empayr-steyt-bilding_60.jpg" alt="Empire State 2">
+        <div class="text-over-image">Empire State на фоні</div>
+      </div>
+
+      <div class="image-box">
+        <img src="https://wikiway.com/upload/resize_cache/hl-photo/f91/e53/720_400_1/empayr-steyt-bilding_45.jpg" alt="Empire State 3">
+        <div class="text-over-image">Всередині Empire State</div>
+      </div>
+
+      <div class="image-box">
+        <img src="https://wikiway.com/upload/resize_cache/hl-photo/f6e/473/720_400_1/empayr-steyt-bilding_11.jpg" alt="Empire State 4">
+        <div class="text-over-image">Теж всередині Empire State</div>
+      </div>
+
+      <div class="image-box">
+        <img src="https://wikiway.com/upload/resize_cache/hl-photo/71d/89c/720_400_1/tsentralnyy-park-nyu-yorka_249.jpg" alt="Central Park 1">
+        <div class="text-over-image">Центральний парк</div>
+      </div>
+
+      <div class="image-box">
+        <img src="https://wikiway.com/upload/resize_cache/hl-photo/cac/c7f/720_400_1/tsentralnyy-park-nyu-yorka_225.jpg" alt="Central Park 2">
+        <div class="text-over-image">Центральний парк - осінь</div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

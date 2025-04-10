@@ -1,0 +1,202 @@
+/* Загальні налаштування */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  color: #221d1d;
+}
+body {
+background: #c3bab7;
+background-size: cover;
+background-position: center; /* Центрує зображення */
+background-repeat: no-repeat; /* Запобігає повторенню */
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+table {
+  background-color: #84a9c9; /* Світло-блакитний фон */
+  border-collapse: collapse;
+  width: 70%;
+}
+table td:nth-child(3), table th:nth-child(3) { 
+  display: none; /* Приховує 3-й стовпець */
+}
+
+/* Колір фону заголовків таблиці */
+th {
+  background-color: #2f3c5d; /* Насичений синій */
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+}
+
+/* Колір фону рядків */
+td {
+  background-color: rgb(242, 238, 238); /* Світло-лавандовий */
+  padding: 8px;
+  font-weight: 700;
+}
+
+/* Шапка */
+header {
+  background-color: #2f3c5d;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #7ea4bc;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #666;
+}
+
+/* Основний контент */
+main {
+  padding: 20px;
+  text-align: center;
+   font-weight: 700;
+  
+
+   } 
+   
+
+h1, h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Галерея */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-box {
+  position: relative;
+  width: 300px;
+  border-radius: 8px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.text-over-image {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 0 0 8px 8px;
+}
+.animated-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #8b786d, #8b786d);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.runaway-button {
+  position: absolute;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #8b786d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+
+.animated-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out, top 0.4s ease-in-out, left 0.4s ease-in-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.animated-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.animated-button:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.animated-button:active {
+  transform: scale(0.95);
+}
+
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 90%;
+  }
+
+  .text-over-image {
+    font-size: 14px;
+    padding: 4px;
+  }
+}
